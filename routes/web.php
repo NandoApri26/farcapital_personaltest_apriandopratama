@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PendonorController;
 use App\Http\Controllers\SyaratdonorController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+
 
 // Syarat Donor
 Route::get('/SyaratDonor', [SyaratdonorController::class, 'index']);
